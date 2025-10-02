@@ -19,5 +19,6 @@ class BookingRepository {
             );
         }
     }
+
 }
 module.exports = BookingRepository;
