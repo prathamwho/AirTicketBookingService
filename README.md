@@ -2,9 +2,9 @@
 
 A microservice for handling flight bookings, built with Node.js, Express, and Sequelize. This service is a core component of the Airline Management System, responsible for managing the entire booking lifecycle. It communicates with other services, such as a Flight Service, to ensure data consistency and uses a message broker for asynchronous tasks.
 
+![structure](./structure.png)
 ---
 
-![structure](./structure.png)
 
 ## Features
 
