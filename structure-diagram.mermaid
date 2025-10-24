@@ -1,0 +1,24 @@
+erDiagram
+    USERS {
+        int id PK
+        %% ... other user attributes from Auth Service
+    }
+
+    FLIGHTS {
+        int id PK
+        %% ... other flight attributes from Flight Service
+    }
+
+    BOOKINGS {
+        int id PK
+        int flightId FK "Foreign key to FLIGHTS table"
+        int userId FK "Foreign key to USERS table"
+        string status "ENUM: InProcess, Booked, Cancelled"
+        int noOfSeats "Default: 1"
+        int totalCost "Calculated field: price * noOfSeats"
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    USERS ||--|{ BOOKINGS : "places"
+    FLIGHTS ||--|{ BOOKINGS : "has"
